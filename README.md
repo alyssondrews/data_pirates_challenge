@@ -12,13 +12,14 @@ The script runs on `Python 3.8`.
 
 To install the requirements you need to execute:
 
-    $ pip3 install -r requirements.txt
+    $ cd ./src
+    $ pip install -r requirements.txt
 ## Run Project: 
 
 To run this project, just execute the following command in your terminal:
  
     $ cd ./src
-    $ python3 get_cep.py
+    $ python get_cep.py
 
 ## Results:
 
