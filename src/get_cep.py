@@ -9,9 +9,11 @@ from bs4 import BeautifulSoup
 
 ##Create Document##
 def create_and_write_document(dir_name, name_uf, data):
-    with open('./{}/{}.jsonl'.format(dir_name, name_uf), 'w+') as output:
+    with open('./{}/{}.jsonl'.format(dir_name, name_uf), 'w+', encoding='utf-8') as output:
+        output.write('{ CEP: [')
         for line in data:
-            output.write(json.dumps(line) + '\n')
+            output.write(json.dumps(line, ensure_ascii=False) + ',\n')
+        output.write(']}')
 
 ##Get data from URL##
 def get_data(req):
