@@ -30,5 +30,5 @@ The results appear in a folder called docs, with all ZIPCODE separated in a JSON
 This project have unitary tests, to run them just use the following commands in your terminal:
 
     $ cd ./src
-    $ python -m unittest test_verify.py
+    $ pytest test_verify.py
  

@@ -40,6 +40,7 @@ if __name__ == '__main__':
         result = urlopen(request).read()
         data = get_data(result)
         address = clean_data(data)
+        print(data)
         dir_name = constants.NAME_OF_DIRECTORY
         try:
             os.mkdir(dir_name)
