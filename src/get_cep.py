@@ -27,6 +27,10 @@ def build_info(data, qtdrow = 100):
         }
         for td in data.findAll('tr')[2:2 + qtdrow]
         ]
+def clean_data(data):
+    address_list = build_info(data)
+    remove_duplicates = {each ['Localidade'] : each for each in address_list}.values()
+    return remove_duplicates
 
 if __name__ == '__main__':
     url = 'http://www.buscacep.correios.com.br/sistemas/buscacep/resultadoBuscaFaixaCep.cfm'
@@ -35,7 +39,7 @@ if __name__ == '__main__':
         request = Request(url, urlencode(fields).encode())
         result = urlopen(request).read()
         data = get_data(result)
-        address = build_info(data)
+        address = clean_data(data)
         dir_name = constants.NAME_OF_DIRECTORY
         try:
             os.mkdir(dir_name)
