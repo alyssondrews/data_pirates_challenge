@@ -1,7 +1,5 @@
 # Data Pirates Challenge - Possible Solution
 
-This script is a challenge made by [Neoway](neoway.com.br).
-
 ## Scenario:
 
 This project aims to make a crawler to get information from all UF's ZIPCODE of the [Correios](http://www.buscacep.correios.com.br/sistemas/buscacep/resultadoBuscaFaixaCep.cfm) website and save it in a JSON file.
